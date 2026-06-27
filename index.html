@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FSRA Website Redesign</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <h1 class="logo">FSRA Ontario</h1>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#risk">Risk Tool</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="theme-btn" onclick="toggleTheme()">
+                Dark Mode
+            </button>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h2>
+                Protecting Consumers.
+                <br>
+                Strengthening Ontario's Financial System.
+            </h2>
+
+            <p>
+                A modern redesign of the Financial Services Regulatory Authority
+                of Ontario website focused on accessibility, user experience,
+                and financial risk awareness.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#risk" class="hero-btn">
+                    Assess Risk
+                </a>
+
+                <a href="#services" class="hero-btn secondary-btn">
+                    Explore Services
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= STATISTICS ================= -->
+
+    <section class="stats">
+
+        <div>
+            <h3>15+</h3>
+            <p>Financial Sectors</p>
+        </div>
+
+        <div>
+            <h3>3M+</h3>
+            <p>Consumers Protected</p>
+        </div>
+
+        <div>
+            <h3>120+</h3>
+            <p>Licensed Institutions</p>
+        </div>
+
+        <div>
+            <h3>98%</h3>
+            <p>Digital Services</p>
+        </div>
+
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+
+    <section id="services" class="section">
+
+        <h2>Our Services</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>🛡 Consumer Protection</h3>
+
+                <p>
+                    Learn about insurance, pensions, mortgages,
+                    and protecting your financial future.
+                </p>
+
+                <a href="#contact" class="card-link">
+                    Learn More →
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>📊 Risk Analytics</h3>
+
+                <p>
+                    Assess financial risk using an easy-to-use
+                    interactive tool built with JavaScript.
+                </p>
+
+                <a href="#risk" class="card-link">
+                    Open Tool →
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>🏛 Licensing</h3>
+
+                <p>
+                    Find information on licensing,
+                    compliance, and regulatory guidance.
+                </p>
+
+                <a href="#contact" class="card-link">
+                    Start →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= RISK TOOL ================= -->
+
+    <section id="risk" class="section">
+
+        <h2>Financial Risk Assessment Tool</h2>
+
+        <p>
+            Enter a score between 0 and 100.
+        </p>
+
+        <input
+            type="number"
+            id="riskScore"
+            placeholder="Enter Risk Score"
+            min="0"
+            max="100">
+
+        <button onclick="checkRisk()">
+            Check Risk
+        </button>
+
+        <br><br>
+
+        <div id="riskResult" class="result"></div>
+
+    </section>
+
+    <!-- ================= FAQ ================= -->
+
+    <section id="faq" class="section">
+
+        <h2>Frequently Asked Questions</h2>
+
+        <button class="faq-question" onclick="toggleFAQ(0)">
+            What does FSRA do?
+        </button>
+
+        <div class="faq-answer">
+            FSRA regulates Ontario's financial services sector,
+            protecting consumers while ensuring a safe financial marketplace.
+        </div>
+
+        <button class="faq-question" onclick="toggleFAQ(1)">
+            Why is accessibility important?
+        </button>
+
+        <div class="faq-answer">
+            Accessibility ensures everyone, including people with disabilities,
+            can easily access financial information and services.
+        </div>
+
+        <button class="faq-question" onclick="toggleFAQ(2)">
+            What is the Risk Tool?
+        </button>
+
+        <div class="faq-answer">
+            This demo classifies a financial risk score as
+            Low, Medium, or High using JavaScript.
+        </div>
+
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="section">
+
+        <h2>Contact Us</h2>
+
+        <form onsubmit="submitForm(event)">
+
+            <label>Name</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name">
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email">
+
+            <label>Message</label>
+
+            <textarea
+                id="message"
+                placeholder="Type your message"></textarea>
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
+        <br>
+
+        <div id="formResult" class="result"></div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>FSRA Website Redesign</h3>
+
+        <p>
+            Designed and Developed by
+            <strong>Eric Rathod</strong>
+        </p>
+
+        <p>
+            Master of Artificial Intelligence –
+            Seneca Polytechnic
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
